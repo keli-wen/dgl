@@ -30,7 +30,7 @@ __all__ = [
 
 
 class GraphMetadata:
-    r"""Class for metadata of csc sampling graph."""
+    r"""Class for metadata of fused csc sampling graph."""
 
     def __init__(
         self,
@@ -92,7 +92,7 @@ class FusedCSCSamplingGraph(SamplingGraph):
     r"""A sampling graph in CSC format."""
 
     def __repr__(self):
-        return _csc_sampling_graph_str(self)
+        return _fused_csc_sampling_graph_str(self)
 
     def __init__(
         self, c_csc_graph: torch.ScriptObject, metadata: Optional[GraphMetadata]
@@ -816,8 +816,8 @@ def load_from_shared_memory(
     )
 
 
-def _csc_sampling_graph_str(graph: FusedCSCSamplingGraph) -> str:
-    """Internal function for converting a csc sampling graph to string
+def _fused_csc_sampling_graph_str(graph: FusedCSCSamplingGraph) -> str:
+    """Internal function for converting a fused csc sampling graph to string
     representation.
     """
     csc_indptr_str = str(graph.csc_indptr)

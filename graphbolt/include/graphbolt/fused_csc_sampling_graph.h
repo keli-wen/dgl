@@ -1,10 +1,10 @@
 /**
  *  Copyright (c) 2023 by Contributors
  * @file graphbolt/fused_csc_sampling_graph.h
- * @brief Header file of csc sampling graph.
+ * @brief Header file of fused csc sampling graph.
  */
-#ifndef GRAPHBOLT_CSC_SAMPLING_GRAPH_H_
-#define GRAPHBOLT_CSC_SAMPLING_GRAPH_H_
+#ifndef GRAPHBOLT_FUSED_CSC_SAMPLING_GRAPH_H_
+#define GRAPHBOLT_FUSED_CSC_SAMPLING_GRAPH_H_
 
 #include <graphbolt/sampled_subgraph.h>
 #include <graphbolt/shared_memory.h>
@@ -456,4 +456,4 @@ int64_t LaborPick(
 }  // namespace sampling
 }  // namespace graphbolt
 
-#endif  // GRAPHBOLT_CSC_SAMPLING_GRAPH_H_
+#endif  // GRAPHBOLT_FUSED_CSC_SAMPLING_GRAPH_H_
